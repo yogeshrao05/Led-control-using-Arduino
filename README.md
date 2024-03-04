@@ -59,8 +59,45 @@ Weighing Machines </br>
 
 ## CIRCUIT DIAGRAM
 
-## PROGRAM
 
+![2024-03-04](https://github.com/yogeshrao05/Led-control-using-Arduino/assets/122008288/02e0718e-e87a-4ea4-8fa7-4de767faa78d)
+
+
+## PROGRAM
+```
+const int ledPin=13;
+const int buttonPin=2;
+
+int buttonState=0;
+
+void setup() {
+  pinMode(ledPin,OUTPUT);
+  pinMode(buttonPin,INPUT);
+}
+
+void loop() {
+  buttonState=digitalRead(buttonPin);
+  if(buttonState==HIGH)
+  {
+    digitalWrite(ledPin,HIGH);
+  }
+  else
+  {
+    digitalWrite(ledPin,LOW);
+  }
+}
+```
 ## OUTPUT
 
+OFF
+
+![iot ex 2](https://github.com/yogeshrao05/Led-control-using-Arduino/assets/122008288/983dffaa-c620-4dfc-b895-e6d2f1adf154)
+
+ON
+
+![iot](https://github.com/yogeshrao05/Led-control-using-Arduino/assets/122008288/eefb8bb9-26d5-41bb-b81e-916639bcf3ad)
+
+
+
 ## RESULT
+Thus the design and implement a system for LED control using an Arduino microcontroller and a push button is verified successfully.
